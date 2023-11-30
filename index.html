@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Query the collection "employee" and list all the documents</h3>
+    <h5>1.db.employee.find({})</h5>
+
+    <h3>Query the collection "employee" and list the employees who are having salary more than 30000</h3>
+    <h5>2.db.employee.find({"salary":{$gt:'30000'}})</h5>
+
+    <h3>Query the collection "employee" and list the employees who are having experience more than 2 years.</h3>
+    <h5>3.db.employee.find({"overallExp":{$gt:'2'}})</h5>
+
+    <h3>Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year</h3> 
+    <h5>4.db.employee.find({"overallExp":{$gt:'2'},"yearGrad":{$gt:'2015'}})</h5>
+
+    <h3>Query the collection "employee" and update the salary of the employee whose salary is greater than 70000 to 65000.</h3>
+    <h5>5.db.employee.updateMany({"salary":{$gt:"20000"}},{$set:{"salary":"44000"}})</h5>
+    
+    <h3>Delete all the documents from "employee" where last company is Y</h3>
+    <h5>6.db.employee.deleteMany({"lastCompany":"Y"})</h5>
+</body>
+</html>
